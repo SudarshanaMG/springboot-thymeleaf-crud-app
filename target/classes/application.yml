@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:sqlserver://springboot-app1.database.windows.net:1433;database=springboot1;user=admin1@springboot-app1;password=Sudarshana@48;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jpa:
+    database-platform: org.hibernate.dialect.SQLServerDialect
+    hibernate:
+      ddl-auto: update  # Options: none, validate, update, create, create-drop
+    show-sql: true  # Enables SQL logging
+  sql:
+    init:
+      mode: always  # Ensures SQL scripts run on startup (use "never" in production)
+
+server:
+  port: 8080
